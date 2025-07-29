@@ -9,7 +9,7 @@ export const SearchBox = () => {
         variant="none"
         w="full"
         placeholder="Search..."
-        fontFamily="lato"
+        fontFamily="inter"
         size="sm"
         bgColor="white"
         h={{ base: "30px", lg: "48px" }}

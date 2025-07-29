@@ -1,16 +1,18 @@
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
-import { ButtonTheme } from "./button";
+import { Button } from "./button";
 import { fontConfig } from "./text";
 import { colors } from "./color";
 
 const config: ThemeConfig = {
   useSystemColorMode: true,
-  cssVarPrefix: 'exstacck',
+  cssVarPrefix: "exstacck",
 };
 
 export const theme = extendTheme({
-    config,
+  config,
+  components: {
     ...fontConfig,
-    ...ButtonTheme,
-    colors
-})
+    Button,
+  },
+  colors,
+});

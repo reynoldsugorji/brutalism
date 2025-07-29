@@ -1,4 +1,4 @@
-import { Logo } from "@/components";
+import { Logo } from "@/components/common";
 import { Box, HStack, Icon, Stack, Text } from "@chakra-ui/react";
 import type { IconType } from "react-icons";
 import {
@@ -26,7 +26,7 @@ export const SidebarContent = () => {
   return (
     <Box as="aside" px={{ base: 2, lg: 4 }} py={6}>
       <Stack>
-        <Box px={3}>
+        <Box px={3} pb={3}>
           <Logo />
         </Box>
         {sidebarItems.map((item) => (

@@ -1,4 +1,3 @@
-import { SearchBox } from "@/components";
 import { Avatar, Box, Center, HStack, Icon, Text } from "@chakra-ui/react";
 import type { IconType } from "react-icons";
 import {
@@ -9,6 +8,7 @@ import {
 } from "react-icons/bs";
 
 import profilePhoto from "@/assets/images/contact1.jpg";
+import { SearchBox } from "@/components/common";
 
 export const Navbar = () => {
   return (
@@ -36,7 +36,7 @@ export const Navbar = () => {
               p={1}
               display={item.notificationCount > 0 ? "flex" : "none"}
             >
-              <Text fontFamily="lato" fontSize="0.75rem">
+              <Text fontFamily="inter" fontSize="0.75rem">
                 {item.notificationCount}
               </Text>
             </Center>

@@ -1,4 +1,8 @@
-import "@fontsource/lato";
+import "@fontsource/inter/400.css";  // normal
+import "@fontsource/inter/600.css";  // semibold
+import "@fontsource/inter/700.css"; 
+import "@fontsource/inter/800.css"; 
+import "@fontsource/inter/900.css";
 import { Layout } from "./Layout";
 import { lazy, Suspense } from "react";
 import { Center, Spinner } from "@chakra-ui/react";

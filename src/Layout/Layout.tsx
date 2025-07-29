@@ -11,7 +11,7 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <Flex minH="100vh" bg="#f4f4f4" overflow="hidden">
       <Box
-        w="250px"
+        w="220px"
         minH="100vh"
         display={{ base: "none", lg: "block" }}
         borderRight="2px solid"
@@ -35,7 +35,13 @@ export const Layout = ({ children }: LayoutProps) => {
           </Box>
         </HStack>
 
-        <Box as="main" p={6} flex="1">
+        <Box
+          as="main"
+          p={6}
+          flex="1"
+          overflowY="auto"
+          maxH={{ base: "calc(100vh - 60px)", lg: "calc(100vh - 80px)" }}
+        >
           {children}
         </Box>
       </Flex>

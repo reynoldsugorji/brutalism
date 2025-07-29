@@ -1,7 +1,7 @@
 import type { ComponentDefaultProps } from "@chakra-ui/react";
 
 const fonts = {
-  lato: `'Lato', sans-serif`,
+  inter: "Inter",
 };
 
 const Text: ComponentDefaultProps = {
@@ -12,40 +12,42 @@ const Text: ComponentDefaultProps = {
       letterSpacing: "tight",
     },
     "text-header-1": {
-      fontSize: ["2xl", "3xl", "4xl"],
+      fontSize: ["xl", "2xl", "2xl"],
       fontWeight: "extrabold",
       lineHeight: "110%",
-      fontFamily: "lato",
+      fontFamily: "inter",
     },
     "text-header-2": {
-      fontSize: ["xl", "2xl", "3xl"],
-      fontWeight: "semibold",
+      fontSize: "md",
+      fontWeight: "extrabold",
       lineHeight: "110%",
-      fontFamily: "lato",
+      fontFamily: "inter",
     },
-    "text-body": {
+    "text-body-1": {
       fontSize: "sm",
       fontWeight: "semibold",
-      fontFamily: "lato",
+      fontFamily: "inter",
     },
-    "text-card-title": {
-      fontSize: "md",
+    "text-body": {
+      fontSize: "xs",
       fontWeight: "semibold",
-      color: "gray.700",
-      fontFamily: "lato",
+      fontFamily: "inter",
     },
     "text-stat": {
       fontSize: "2xl",
       fontWeight: "bold",
       color: "gray.900",
-      fontFamily: "lato",
+      fontFamily: "inter",
+    },
+    "text-sm": {
+      fontSize: "0.65rem",
+      fontWeight: "bold",
+      lineHeight: "0.8rem",
     },
   },
 };
 
 export const fontConfig = {
   fonts,
-  components: {
-    Text,
-  },
+  Text,
 };

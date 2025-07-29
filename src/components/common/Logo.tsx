@@ -2,7 +2,7 @@ import { Center, HStack, Text } from "@chakra-ui/react";
 
 export const Logo = () => {
   return (
-    <HStack spacing={2}>
+    <HStack spacing={1}>
       <Center
         boxSize="30px"
         bgColor="green.50"

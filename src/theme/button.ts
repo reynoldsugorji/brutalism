@@ -1,16 +1,22 @@
 import type { ComponentDefaultProps } from "@chakra-ui/react";
 
-export const ButtonTheme: ComponentDefaultProps = {
-  variant: {
+export const Button: ComponentDefaultProps = {
+  defaultProps: {
+    fontFamily: "inter",
+    variant: "primary",
+    borderRadius: "4px",
+  },
+  variants: {
     primary: {
-      color: "white",
-      bgColor: "primary.500",
-      fontWeight: "bold",
-      _focus: {
-        color: "green.400",
-      },
+      px: 6,
+      bgColor: "white",
+      borderRight: "2px solid",
+      fontWeight: "semibold",
+      _focus: {},
       _hover: {
-        color: "green.400",
+        color: "success.400",
+        bgColor: "white",
+        borderColor: "black",
       },
     },
   },
