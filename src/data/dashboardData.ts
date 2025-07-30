@@ -1,4 +1,4 @@
-export const chartData = [
+export const lineChartData7Days = [
   {
     date: "March 1",
     acquisition: 220,
@@ -36,7 +36,17 @@ export const chartData = [
   },
 ];
 
-export const stackedChartData = [
+export const lineChart14days = [
+  ...lineChartData7Days,
+  { date: "March 8", acquisition: 320, cost: 2900 },
+  { date: "March 9", acquisition: 230, cost: 2700 },
+  { date: "March 10", acquisition: 400, cost: 3100 },
+  { date: "March 11", acquisition: 180, cost: 2100 },
+  { date: "March 12", acquisition: 370, cost: 2800 },
+  { date: "March 13", acquisition: 290, cost: 2600 },
+  { date: "March 14", acquisition: 410, cost: 3200 },
+];
+export const stackedChart7Days = [
   {
     date: "March 1",
     pointA: 70,
@@ -92,5 +102,64 @@ export const stackedChartData = [
     pointC: 20,
     pointD: 10,
     pointE: 30,
+  },
+];
+export const stackedChart14Days = [
+  ...stackedChart7Days,
+  {
+    date: "March 8",
+    pointA: 55,
+    pointB: 30,
+    pointC: 20,
+    pointD: 15,
+    pointE: 35,
+  },
+  {
+    date: "March 9",
+    pointA: 60,
+    pointB: 25,
+    pointC: 25,
+    pointD: 15,
+    pointE: 40,
+  },
+  {
+    date: "March 10",
+    pointA: 75,
+    pointB: 20,
+    pointC: 30,
+    pointD: 10,
+    pointE: 30,
+  },
+  {
+    date: "March 11",
+    pointA: 40,
+    pointB: 20,
+    pointC: 35,
+    pointD: 15,
+    pointE: 25,
+  },
+  {
+    date: "March 12",
+    pointA: 65,
+    pointB: 15,
+    pointC: 25,
+    pointD: 20,
+    pointE: 35,
+  },
+  {
+    date: "March 13",
+    pointA: 70,
+    pointB: 30,
+    pointC: 20,
+    pointD: 10,
+    pointE: 30,
+  },
+  {
+    date: "March 14",
+    pointA: 85,
+    pointB: 25,
+    pointC: 30,
+    pointD: 10,
+    pointE: 40,
   },
 ];

@@ -1,4 +1,3 @@
-import { chartData } from "@/data";
 import {
   Area,
   CartesianGrid,
@@ -8,8 +7,18 @@ import {
   YAxis,
 } from "recharts";
 import { ChartCard } from "../common";
+import { useTheme } from "@chakra-ui/react";
+import { useChartData } from "@/providers";
+import { formatXAxis } from "@/utils";
 
 export const DashboardLineAxis = () => {
+  const theme = useTheme();
+  const grayShades = theme.colors.gray;
+  const greenShades = theme.colors.green;
+  const infoShades = theme.colors.info;
+
+  const { lineChartData, selectedRange } = useChartData();
+
   const formatLeftYAxis = (value: number) => {
     return value.toString();
   };
@@ -18,22 +27,27 @@ export const DashboardLineAxis = () => {
   };
 
   return (
-    <ChartCard title='Acquisition vs Cost'>
+    <ChartCard title="Acquisition vs Cost">
       <ComposedChart
-        data={chartData}
+        data={lineChartData}
         margin={{
-          left: -20,
+          left: -23,
           right: -10,
         }}
       >
-        <CartesianGrid stroke="#C7C7C7" horizontal={true} vertical={false} />
+        <CartesianGrid
+          stroke={grayShades[100]}
+          horizontal={true}
+          vertical={false}
+        />
 
         <XAxis
           dataKey="date"
-          axisLine={{ stroke: "#C7C7C7" }}
+          axisLine={{ stroke: grayShades[100] }}
           tickLine={false}
-          tick={{ fontSize: "0.6rem", fontWeight: 500, fill: "#4f4e4eff" }}
+          tick={{ fontSize: "0.6rem", fontWeight: 500, fill: grayShades[400] }}
           dy={6}
+          tickFormatter={(value) => formatXAxis(value, selectedRange )}
         />
 
         <YAxis
@@ -42,10 +56,10 @@ export const DashboardLineAxis = () => {
           dataKey="acquisition"
           domain={[0, 800]}
           tickCount={9}
-          axisLine={{ stroke: "#C7C7C7" }}
+          axisLine={{ stroke: grayShades[100] }}
           tickFormatter={formatLeftYAxis}
           tickLine={false}
-          tick={{ fontSize: "0.6rem", fontWeight: 500, fill: "#4f4e4eff" }}
+          tick={{ fontSize: "0.6rem", fontWeight: 500, fill: grayShades[400] }}
         />
 
         <YAxis
@@ -54,13 +68,13 @@ export const DashboardLineAxis = () => {
           dataKey="cost"
           domain={[0, 6000]}
           tickCount={7}
-          axisLine={{ stroke: "#C7C7C7" }}
+          axisLine={{ stroke: grayShades[100] }}
           tickFormatter={formatRightYAxis}
           tickLine={false}
           tick={{
             fontSize: "0.6rem",
             fontWeight: 500,
-            fill: "#4f4e4eff",
+            fill: grayShades[400],
           }}
         />
 
@@ -68,9 +82,9 @@ export const DashboardLineAxis = () => {
           yAxisId="left"
           type="monotone"
           dataKey="acquisition"
-          stroke="#6597e8ff"
+          stroke={infoShades[300]}
           strokeWidth={2}
-          fill="#adcbfcff"
+          fill={infoShades[100]}
           fillOpacity={0.3}
           name="Active Users"
           dot={false}
@@ -81,7 +95,7 @@ export const DashboardLineAxis = () => {
           yAxisId="right"
           type="monotone"
           dataKey="cost"
-          stroke="#02ac3aff"
+          stroke={greenShades[300]}
           strokeWidth={3}
           name="Revenue"
           dot={false}

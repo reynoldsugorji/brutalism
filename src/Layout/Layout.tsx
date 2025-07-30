@@ -12,10 +12,11 @@ export const Layout = ({ children }: LayoutProps) => {
     <Flex minH="100vh" bg="#f4f4f4" overflow="hidden">
       <Box
         w="220px"
-        minH="100vh"
+        maxH="100vh"
         display={{ base: "none", lg: "block" }}
         borderRight="2px solid"
         overflowY="auto"
+        className="scrollable-element"
       >
         <SidebarContent />
       </Box>
@@ -23,7 +24,8 @@ export const Layout = ({ children }: LayoutProps) => {
       <Flex direction="column" flex="1">
         <HStack
           borderBottom="2px solid"
-          p={{ base: 2, lg: 4 }}
+          py={{ base: 2, lg: 4 }}
+          px={6}
           h={{ base: "60px", lg: "80px" }}
           justifyContent={{ base: "space-between" }}
         >
@@ -41,6 +43,7 @@ export const Layout = ({ children }: LayoutProps) => {
           flex="1"
           overflowY="auto"
           maxH={{ base: "calc(100vh - 60px)", lg: "calc(100vh - 80px)" }}
+          className="scrollable-element"
         >
           {children}
         </Box>

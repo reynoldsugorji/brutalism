@@ -25,7 +25,11 @@ export const MobileSidebar = () => {
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton as={MdClose} _hover={{ cursor: "pointer" }} />
+          <DrawerCloseButton
+            as={MdClose}
+            size="sm"
+            _hover={{ cursor: "pointer" }}
+          />
           <DrawerBody>
             <SidebarContent />
           </DrawerBody>

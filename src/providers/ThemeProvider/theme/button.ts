@@ -12,12 +12,24 @@ export const Button: ComponentDefaultProps = {
       bgColor: "white",
       borderRight: "2px solid",
       fontWeight: "semibold",
-      _focus: {},
+      borderColor: "black",
+      _focus: {
+        borderColor: "black",
+      },
+      _selected: {
+        borderColor: "black",
+      },
       _hover: {
         color: "success.400",
         bgColor: "white",
         borderColor: "black",
       },
+    },
+    secondary: {
+      bgColor: "success.200",
+      border: "2px solid",
+      fontWeight: "bold",
+      fontSize: "xs",
     },
   },
 };

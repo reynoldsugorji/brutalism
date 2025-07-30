@@ -12,8 +12,8 @@ import { SearchBox } from "@/components/common";
 
 export const Navbar = () => {
   return (
-    <HStack justifyContent="space-between">
-      <Box>
+    <HStack justifyContent={{ base: "end", md: "space-between" }}>
+      <Box display={{ base: "none", lg: "block" }}>
         <SearchBox />
       </Box>
       <HStack>
